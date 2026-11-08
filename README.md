@@ -43,7 +43,7 @@
 
 <div align="center">
 
-  <img src="https://svg-banners.vercel.app/api?type=typeWriter&text1=Hello%21&text2=Nice+to+meet+you&width=800&height=200" alt="Typewriter intro" />
+  <img src="https://readme-typing-svg.demolab.com/?lines=Hello%21;Nice+to+meet+you&font=Fira%20Code&center=true&width=600&height=80&pause=1000" alt="Typing intro" />
   <br />
   <img src="https://komarev.com/ghpvc/?username=thanquannguyen&style=flat-square&color=2bbc8a" alt="Profile views" />
 
