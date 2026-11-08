@@ -16,7 +16,7 @@
 
 <div align="center">
 
-  <img src="https://readme-typing-svg.demolab.com/?lines=Design+Verification+Engineer;SoC+%C2%B7+PMIC+%C2%B7+UCIE&font=Fira%20Code&center=true&width=600&height=80&pause=1000" alt="Typing intro" />
+  <img src="https://readme-typing-svg.demolab.com/?lines=thanquannguyen;DV+Engineer&font=Fira%20Code&center=true&width=600&height=80&pause=1000" alt="Typing intro" />
 
   <img src="https://komarev.com/ghpvc/?username=thanquannguyen&style=flat-square&color=2bbc8a" alt="Profile views" />
 
