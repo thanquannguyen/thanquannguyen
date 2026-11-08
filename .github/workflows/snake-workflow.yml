@@ -1,0 +1,50 @@
+# Generate the contribution-grid snake (Platane/snk).
+#
+# HOW TO APPLY (draft only — this file is NOT in any repo yet):
+#   1. Copy this file to .github/workflows/snake.yml in the profile repo
+#      thanquannguyen/thanquannguyen (direct commit to main is fine —
+#      the repo has no branch protection; a PR works too).
+#   2. Go to the repo's Actions tab and run "Generate contribution
+#      snake" once by hand (workflow_dispatch) so the SVGs exist
+#      immediately instead of waiting for midnight.
+#   3. The workflow commits dist/github-contribution-grid-snake.svg
+#      (light palette) and dist/github-contribution-grid-snake-dark.svg
+#      (github-dark palette) to main. The profile README (v3) references
+#      them via <picture> for dark/light themes.
+#   4. After that it re-runs daily at 00:00 UTC and keeps the snake
+#      up to date automatically. No secret or token setup is needed:
+#      the default GITHUB_TOKEN can push to main here.
+#
+# NOTE: the snake image in the README 404s until the first run has
+# committed the SVGs. That is expected — do not remove the snake block.
+
+name: Generate contribution snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate snake SVGs
+        uses: Platane/snk@v3
+        with:
+          github_user_name: thanquannguyen
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Commit SVGs to main
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update contribution snake"
+          file_pattern: dist/*.svg
