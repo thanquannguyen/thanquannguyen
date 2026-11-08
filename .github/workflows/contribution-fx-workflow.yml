@@ -1,0 +1,54 @@
+# Contribution FX — workflow đã chuẩn bị sẵn (ứng viên dự phòng / thay thế 3D)
+# Nguồn: README của Sur1ive/contribution-fx (đọc kĩ 08/11/2026)
+# Đây là file DỰ PHÒNG — chỉ áp nếu chọn Contribution FX thay cho (hoặc thay vì)
+# 3D-contrib. KHÔNG áp cả hai cùng lúc với snake: 3 hình contribution là thừa.
+#
+# CÁCH ÁP DỤNG (3 bước):
+#   1. Đặt file này vào repo profile: .github/workflows/contribution-fx.yml
+#      (GitHub API KHÔNG ghi được workflow — phải đi qua web UI, dùng Upload file.)
+#   2. Chạy tay lần đầu: tab Actions → "contribution-fx" → Run workflow.
+#      Action build ra thư mục dist/ rồi publish sang nhánh `output`
+#      (nhánh này được tạo tự động, KHÔNG commit vào main).
+#   3. Thêm vào README (đặt sau mục Snake):
+#        ![Contribution FX](https://raw.githubusercontent.com/thanquannguyen/thanquannguyen/output/contribution-fx-dark.svg)
+#
+# THEME: file này dùng theme=gravity (mặc định của README gốc — các ô vuông rơi
+# theo trọng lực). Các theme khác: life (Game of Life — hợp giọng kỹ sư nhất),
+# sort (sắp xếp), ripple (gợn sóng), fireworks (pháo hoa — trang trí nhất).
+# Đổi theme bằng cách sửa `theme=gravity` ở cả hai dòng outputs.
+# Palette: mặc định github; có thêm ocean, sunset, purple, halloween.
+#
+# LƯU Ý:
+# - KHÔNG cần secret: GITHUB_TOKEN mặc định đủ (đọc contribution công khai).
+# - Animation là CSS @keyframes thuần trong SVG (không cần JS) — GitHub render
+#   được trong README; có fallback tĩnh nếu trình duyệt tắt animation.
+# - Nhánh `output` sẽ xuất hiện trong repo profile (nhánh gh-pages kiểu cũ) —
+#   đây là khác biệt chính so với snake/3D (commit thẳng vào main).
+
+name: contribution-fx
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Chạy hằng ngày lúc 00:00 UTC (07:00 giờ VN), khớp snake
+  workflow_dispatch: # Cho phép chạy tay lần đầu
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Sur1ive/contribution-fx@v1
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/contribution-fx.svg?theme=gravity
+            dist/contribution-fx-dark.svg?theme=gravity&mode=dark
+
+      - uses: crazy-max/ghaction-github-pages@v5
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
