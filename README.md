@@ -39,7 +39,7 @@
   facts about Nguyên.
 -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=thanquannguyen&fontSize=70" alt="Header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=thanquannguyen&fontSize=50&animation=twinkling" alt="Header" />
 
 <div align="center">
 
@@ -134,4 +134,4 @@
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" alt="Footer" />
+<img src="https://zane-nostalgia.kiyo-n-zane.com/scenes/rainy/api?height=120&width=2000&density=20" alt="Footer" />
