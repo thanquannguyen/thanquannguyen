@@ -2,7 +2,7 @@
 
 **Design Verification Engineer** — 2 years of experience across UCIE, PMIC, and now SoC for an electric-vehicle system.
 
-I'm also doing a master's on a coverage-guided, performance-aware verification methodology for RISC-V memory systems (Cocotb + Verilator, AXI), and I mentor a student team building an open-source AXI verification platform.
+I'm also doing a master's in computer engineering, focusing on hardware verification, and I mentor a student team on their graduation project.
 
 ---
 
@@ -18,18 +18,10 @@ I'm also doing a master's on a coverage-guided, performance-aware verification m
 
 ---
 
-### 📊 GitHub Stats
-
-![Nguyên's GitHub stats](https://github-readme-stats.vercel.app/api?username=thanquannguyen&show_icons=true&theme=github_dark&hide_border=true&count_private=false)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=thanquannguyen&layout=compact&theme=github_dark&hide_border=true&langs_count=8)
-
----
-
 ### 🚀 Featured Projects
 
 | Project | What it is |
 |---|---|
 | [M365Migration](https://github.com/thanquannguyen/M365Migration) | PowerShell suite for Microsoft 365 tenant-to-tenant migration: user export/creation, licensing, OneDrive provisioning and migration, validation, and source cleanup. |
 | [moneylover-mcp](https://github.com/thanquannguyen/moneylover-mcp) | MCP server for MoneyLover (unofficial) — personal finance data as tools for AI assistants. |
-| RISC-V AXI Verification Platform | Open-source Cocotb + Verilator environment for the AXI interconnect, with a coverage-guided methodology. Master's thesis project, built with a student team I mentor. *(Repo is private while the thesis is in progress.)* |
 | VNC Discord Bot | Feature-rich Discord bot (moderation, leveling, automations) built with discord.js and MongoDB. *(Repo is private.)* |
