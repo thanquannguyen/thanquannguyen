@@ -39,11 +39,11 @@
   facts about Nguyên.
 -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=thanquannguyen&fontSize=50&animation=twinkling" alt="Header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=thanquannguyen&fontSize=35&animation=twinkling" alt="Header" />
 
 <div align="center">
 
-  <img src="https://readme-typing-svg.demolab.com/?lines=Hello%21;Nice+to+meet+you&font=Fira%20Code&center=true&width=600&height=80&pause=1000" alt="Typing intro" />
+  <img src="https://svg-banners.vercel.app/api?type=typeWriter&text1=Hello%21&text2=Nice+to+meet+you&width=800&height=200" alt="Typewriter intro" />
   <br />
   <img src="https://komarev.com/ghpvc/?username=thanquannguyen&style=flat-square&color=2bbc8a" alt="Profile views" />
 
@@ -134,4 +134,4 @@
 
 ---
 
-<img src="https://zane-nostalgia.kiyo-n-zane.com/scenes/rainy/api?height=120&width=2000&density=20" alt="Footer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer" alt="Footer" />
